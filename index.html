@@ -10,37 +10,29 @@ name="viewport"
 content="width=device-width, initial-scale=1.0">
 
 <title>
-AIK Interactive Review — Week 4–5
+AIK Interactive Review — Solid Handling & Conveying Equipment
 </title>
+
 
 <style>
 
 :root{
 
 --navy:#153452;
-
 --blue:#2f6fa5;
-
 --teal:#367d70;
-
 --gold:#b28734;
 
 --ink:#23364b;
-
 --muted:#69798b;
-
 --line:#d8e0e7;
-
 --paper:#fbfaf7;
-
 --soft:#f3f6f8;
 
 --ok:#24734f;
-
 --okbg:#e9f5ef;
 
 --bad:#a2443f;
-
 --badbg:#faeceb;
 
 }
@@ -60,20 +52,16 @@ Arial,
 Helvetica,
 sans-serif;
 
-color:var(--ink);
+color:
+var(--ink);
 
 background:
 
 linear-gradient(
-
 180deg,
-
 #f5f1e8 0,
-
 #fafafa 220px,
-
 #f6f7f8 100%
-
 );
 
 }
@@ -81,9 +69,11 @@ linear-gradient(
 
 .container{
 
-max-width:1100px;
+max-width:
+1100px;
 
-margin:auto;
+margin:
+auto;
 
 padding:
 28px 18px 50px;
@@ -162,8 +152,14 @@ clamp(
 54px
 );
 
+line-height:
+1.08;
+
 margin-top:
 8px;
+
+max-width:
+950px;
 
 }
 
@@ -183,7 +179,7 @@ line-height:
 1.55;
 
 margin-top:
-14px;
+16px;
 
 }
 
@@ -295,9 +291,9 @@ block;
 }
 
 
-/* ==========================
+/* =============================
    SUMMARY
-========================== */
+============================= */
 
 
 .week-grid{
@@ -342,6 +338,17 @@ var(--teal);
 }
 
 
+.week-card h3{
+
+font-size:
+23px;
+
+margin:
+6px 0 14px;
+
+}
+
+
 .week-label{
 
 font-size:
@@ -358,17 +365,6 @@ uppercase;
 
 color:
 var(--muted);
-
-}
-
-
-.week-card h3{
-
-font-size:
-23px;
-
-margin:
-6px 0 14px;
 
 }
 
@@ -592,9 +588,9 @@ line-height:
 }
 
 
-/* ==========================
+/* =============================
    FLASHCARDS
-========================== */
+============================= */
 
 
 .flash-wrap{
@@ -724,9 +720,9 @@ color:
 }
 
 
-/* ==========================
+/* =============================
    QUIZ
-========================== */
+============================= */
 
 
 .quiz-shell{
@@ -1098,6 +1094,7 @@ repeat(2,1fr);
 
 }
 
+
 .route-grid{
 
 grid-template-columns:
@@ -1131,6 +1128,7 @@ padding:
 
 }
 
+
 .flash-wrap,
 .route-grid{
 
@@ -1138,6 +1136,7 @@ grid-template-columns:
 1fr;
 
 }
+
 
 .question{
 
@@ -1164,24 +1163,23 @@ font-size:
 
 <div class="eyebrow">
 
-Alat Industri Kimia • Interactive Review
+ALAT INDUSTRI KIMIA • INTERACTIVE REVIEW
 
 </div>
 
 
 <h1>
 
-Week 4–5
+Solid Handling &amp; Conveying Equipment
 
 </h1>
 
 
 <p class="subtitle">
 
-Solid Handling & Conveying Equipment.
-Review prinsip kerja, karakter feed,
-kebutuhan lintasan, containment,
-serta pemilihan conveyor yang tepat.
+Interactive review untuk materi Week 4–5.
+Gunakan menu di bawah untuk membaca ringkasan,
+latihan flashcards, atau mengerjakan quiz.
 
 </p>
 
@@ -1222,7 +1220,7 @@ Quiz
 
 
 <!-- ===================================
-     SUMMARY
+     RINGKASAN
 =================================== -->
 
 
@@ -1261,8 +1259,8 @@ Screw Conveyor
 </b>
 
 <span>
-Rotating helical screw;
-compact dan enclosed;
+Rotating helical screw memberi push/drag pada bulk solid.
+Compact dan enclosed;
 cocok untuk powder/granular
 jarak pendek–menengah.
 </span>
@@ -1277,8 +1275,8 @@ Belt Conveyor
 </b>
 
 <span>
-Material dibawa di atas endless belt;
-unggul untuk jarak panjang,
+Material dibawa di atas endless belt.
+Cocok untuk jarak menengah–panjang,
 capacity tinggi,
 dan gentle handling.
 </span>
@@ -1294,8 +1292,8 @@ Flight Conveyor
 
 <span>
 Chain dengan flights/paddles
-menyeret bulk solid di dalam trough;
-enclosed drag conveying.
+menyeret bulk solid di dalam trough.
+Cocok untuk enclosed drag conveying.
 </span>
 
 </div>
@@ -1309,8 +1307,8 @@ Overhead Conveyor
 
 <span>
 Unit load digantung pada trolley/carrier
-di overhead track;
-membebaskan floor space.
+yang bergerak pada overhead track.
+Floor space dapat tetap bebas.
 </span>
 
 </div>
@@ -1324,8 +1322,9 @@ Bucket Elevator
 
 <span>
 Buckets pada belt/chain
-mengangkat bulk solid secara vertikal
-dengan footprint kecil.
+mengangkat bulk solid secara vertikal.
+Cocok ketika beda elevasi besar
+dan footprint terbatas.
 </span>
 
 </div>
@@ -1362,8 +1361,9 @@ Vibrating Conveyor
 </b>
 
 <span>
-Vibration/inertia pada trough atau pan;
-cocok untuk short–medium conveying
+Getaran pada trough/pan
+menggerakkan bulk solid secara bertahap.
+Cocok untuk short–medium conveying
 dan controlled feeding.
 </span>
 
@@ -1377,9 +1377,10 @@ Pneumatic Conveyor
 </b>
 
 <span>
-Gas/udara memberikan drag pada partikel
-di closed pipeline;
-routing sangat fleksibel.
+Udara/gas memberi drag force
+pada partikel di dalam closed pipeline.
+Unggul untuk routing fleksibel
+dan dust containment.
 </span>
 
 </div>
@@ -1392,9 +1393,10 @@ Zipper Conveyor
 </b>
 
 <span>
-Enclosed mechanical conveying
-menggunakan chain/flight;
-controlled bulk transport.
+Enclosed mechanical conveyor
+berbasis chain/flight.
+Cocok untuk controlled bulk transport
+dengan kebutuhan containment.
 </span>
 
 </div>
@@ -1413,12 +1415,15 @@ controlled bulk transport.
 <div class="quick">
 
 <h3>
+
 Sebelum Memilih Conveyor
+
 </h3>
+
 
 <p>
 
-Cek direction,
+Pertimbangkan direction,
 distance,
 capacity,
 particle form,
@@ -1426,9 +1431,10 @@ flowability,
 moisture,
 abrasiveness,
 fragility,
-serta kebutuhan dust containment.
+dan dust containment.
 
 </p>
+
 
 </div>
 
@@ -1436,18 +1442,22 @@ serta kebutuhan dust containment.
 <div class="quick">
 
 <h3>
+
 Week 5 Menambah Apa?
+
 </h3>
+
 
 <p>
 
-Pilihan untuk kondisi khusus:
-controlled vibratory feeding,
-closed flexible pipeline,
-atau enclosed mechanical
+Week 5 memberikan pilihan
+untuk controlled vibratory feeding,
+closed flexible pipeline transport,
+dan enclosed mechanical
 chain/flight conveying.
 
 </p>
+
 
 </div>
 
@@ -1472,89 +1482,124 @@ Quick Selection Map
 <div class="route">
 
 <b>
+
 Long Horizontal
+
 </b>
 
+
 <span>
+
 BELT —
-capacity tinggi
+capacity tinggi,
+jarak panjang,
 dan gentle handling.
+
 </span>
 
 </div>
 
 
+
 <div class="route">
 
 <b>
+
 Compact + Enclosed
+
 </b>
 
+
 <span>
+
 SCREW / FLIGHT / ZIPPER —
 controlled transport
 untuk bulk solids.
+
 </span>
 
 </div>
 
 
+
 <div class="route">
 
 <b>
+
 Vertical Bulk
+
 </b>
 
+
 <span>
+
 BUCKET ELEVATOR —
-beda elevasi besar
+vertical lift
 dengan footprint kecil.
+
 </span>
 
 </div>
 
 
+
 <div class="route">
 
 <b>
+
 Flexible Pipeline
+
 </b>
 
+
 <span>
+
 PNEUMATIC —
-closed transfer,
-terutama untuk powder/granular
-yang sesuai.
+closed transfer
+dengan routing fleksibel.
+
 </span>
 
 </div>
 
 
+
 <div class="route">
 
 <b>
+
 Controlled Feeding
+
 </b>
 
+
 <span>
+
 VIBRATING —
 short route
 dengan feed relatif stabil.
+
 </span>
 
 </div>
 
 
+
 <div class="route">
 
 <b>
+
 Unit Load + Free Floor
+
 </b>
 
+
 <span>
+
 OVERHEAD —
 routing antar workstation
-tanpa memakai floor space.
+tanpa menggunakan floor space.
+
 </span>
 
 </div>
@@ -1570,15 +1615,19 @@ tanpa memakai floor space.
 <div class="note">
 
 <b>
+
 Ingat:
+
 </b>
 
-jangan memilih conveyor dari nama alat.
+jangan memilih conveyor hanya dari nama alat.
 
 Mulai dari
 
 <b>
+
 route → distance → feed → containment → gentleness → energy.
+
 </b>
 
 </div>
@@ -1612,6 +1661,7 @@ Klik kartu untuk melihat jawabannya.
 <div
 id="flashGrid"
 class="flash-wrap">
+
 </div>
 
 
@@ -1636,42 +1686,63 @@ class="quiz-shell">
 
 <div class="quiz-meta">
 
-<span id="qMeta"></span>
 
-<span id="scoreMeta"></span>
+<span id="qMeta">
+
+</span>
+
+
+<span id="scoreMeta">
+
+</span>
+
 
 </div>
+
 
 
 <div class="progress">
 
-<div id="progressBar"></div>
+
+<div id="progressBar">
 
 </div>
+
+
+</div>
+
 
 
 <div
 id="qWeek"
 class="week-label">
+
 </div>
+
 
 
 <div
 id="question"
 class="question">
+
 </div>
+
 
 
 <div
 id="options"
 class="options">
+
 </div>
+
 
 
 <div
 id="feedback"
 class="feedback">
+
 </div>
+
 
 
 <div class="quiz-actions">
@@ -1718,6 +1789,7 @@ HASIL QUIZ
 <div
 id="finalScore"
 class="scorebig">
+
 </div>
 
 
@@ -1734,6 +1806,7 @@ font-size:17px;
 <div
 id="breakdown"
 class="breakdown">
+
 </div>
 
 
@@ -1770,9 +1843,9 @@ Program Studi Teknik Kimia • UPN “Veteran” Jawa Timur
 <script>
 
 
-/* =============================================
+/* ==========================================
    FLASHCARD DATA
-============================================= */
+========================================== */
 
 
 const flashcards = [
@@ -1809,7 +1882,7 @@ week:"Week 4",
 name:"Flight Conveyor",
 
 text:
-"Chain dengan flights/paddles menyeret bulk solid di dalam trough. Cocok untuk enclosed controlled drag transport. Waspadai friction, wear, dan degradation."
+"Chain dengan flights atau paddles menyeret bulk solid di dalam trough. Cocok untuk enclosed controlled drag transport. Waspadai friction, wear, dan degradation."
 
 },
 
@@ -1821,7 +1894,7 @@ week:"Week 4",
 name:"Overhead Conveyor",
 
 text:
-"Trolley/carrier bergerak pada overhead track dengan load tergantung di bawahnya. Cocok untuk unit load dan routing antar workstation sambil menjaga floor space tetap bebas."
+"Trolley atau carrier bergerak pada overhead track dengan load digantung di bawahnya. Cocok untuk unit load dan routing antar workstation sambil menjaga floor space tetap bebas."
 
 },
 
@@ -1833,7 +1906,7 @@ week:"Week 4",
 name:"Bucket Elevator",
 
 text:
-"Buckets pada belt/chain mengambil material di boot lalu mengangkatnya menuju head. Cocok untuk vertical lift bulk solid dengan footprint kecil."
+"Buckets pada belt atau chain mengambil material di bagian bawah dan mengangkatnya menuju bagian atas. Cocok untuk vertical lift bulk solid dengan footprint kecil."
 
 },
 
@@ -1845,7 +1918,7 @@ week:"Week 5",
 name:"Vibrating Conveyor",
 
 text:
-"Trough/pan digetarkan sehingga material maju akibat vibration, inertia, dan friction. Cocok untuk short–medium conveying serta controlled feeding."
+"Trough atau pan digetarkan sehingga material bergerak maju akibat vibration, inertia, dan friction. Cocok untuk short–medium conveying serta controlled feeding."
 
 },
 
@@ -1857,7 +1930,7 @@ week:"Week 5",
 name:"Pneumatic Conveyor",
 
 text:
-"Udara atau gas memberi drag force sehingga partikel bergerak di dalam closed pipeline. Cocok untuk route fleksibel dan dust containment."
+"Udara atau gas memberi drag force sehingga partikel bergerak di dalam closed pipeline. Cocok untuk flexible routing dan dust containment."
 
 },
 
@@ -1869,28 +1942,24 @@ week:"Week 5",
 name:"Zipper Conveyor",
 
 text:
-"Chain/flight bergerak di dalam closed casing dan membawa atau menyeret bulk solid menuju discharge. Cocok untuk enclosed mechanical controlled conveying."
+"Chain atau flight bergerak di dalam closed casing dan membawa atau menyeret bulk solid menuju discharge. Cocok untuk enclosed mechanical controlled conveying."
 
 }
+
 
 ];
 
 
 
-/* =============================================
+/* ==========================================
    QUIZ DATA
-
-   Semua jawaban benar awalnya index 0,
-   lalu posisi akan disebar oleh script.
-============================================= */
+========================================== */
 
 
 const questions = [
 
 
-/* ================
-   WEEK 4 — Q1
-================ */
+/* WEEK 4 — SOAL 1 */
 
 
 {
@@ -1908,7 +1977,7 @@ options:[
 
 "Screw Conveyor",
 
-BucketText = "Bucket Elevator",
+"Bucket Elevator",
 
 "Overhead Conveyor"
 
@@ -1922,9 +1991,8 @@ why:
 },
 
 
-/* ================
-   WEEK 4 — Q2
-================ */
+
+/* WEEK 4 — SOAL 2 */
 
 
 {
@@ -1951,14 +2019,13 @@ options:[
 answer:0,
 
 why:
-"Screw Conveyor compact dan enclosed serta cocok untuk powder/granular pada jarak pendek–menengah."
+"Screw Conveyor compact dan enclosed serta cocok untuk powder atau granular pada jarak pendek–menengah."
 
 },
 
 
-/* ================
-   WEEK 4 — Q3
-================ */
+
+/* WEEK 4 — SOAL 3 */
 
 
 {
@@ -1990,9 +2057,8 @@ why:
 },
 
 
-/* ================
-   WEEK 4 — Q4
-================ */
+
+/* WEEK 4 — SOAL 4 */
 
 
 {
@@ -2024,9 +2090,8 @@ why:
 },
 
 
-/* ================
-   WEEK 4 — Q5
-================ */
+
+/* WEEK 4 — SOAL 5 */
 
 
 {
@@ -2046,21 +2111,20 @@ options:[
 
 "Bucket mengangkat material secara vertikal",
 
-"Endless belt membawa material tanpa drag"
+"Endless belt membawa material di atas belt"
 
 ],
 
 answer:0,
 
 why:
-"Flight Conveyor menggunakan chain dengan flights/paddles untuk drag conveying di dalam trough."
+"Flight Conveyor menggunakan chain dengan flights atau paddles untuk drag conveying di dalam trough."
 
 },
 
 
-/* ================
-   WEEK 4 — Q6
-================ */
+
+/* WEEK 4 — SOAL 6 */
 
 
 {
@@ -2087,14 +2151,13 @@ options:[
 answer:0,
 
 why:
-"Sticky solids dapat mengalami build-up pada Screw Conveyor."
+"Sticky solids dapat mengalami build-up di dalam Screw Conveyor."
 
 },
 
 
-/* ================
-   WEEK 4 — Q7
-================ */
+
+/* WEEK 4 — SOAL 7 */
 
 
 {
@@ -2104,7 +2167,7 @@ week:"Week 4",
 topic:"Belt Conveyor",
 
 q:
-"Keunggulan utama Belt Conveyor dibanding drag conveyor untuk long-distance transport adalah …",
+"Keunggulan utama Belt Conveyor untuk long-distance transport adalah …",
 
 options:[
 
@@ -2114,7 +2177,7 @@ options:[
 
 "Paling tepat untuk vertical lift",
 
-"Memakai pressure gas tinggi"
+"Menggunakan pressure gas tinggi"
 
 ],
 
@@ -2126,9 +2189,8 @@ why:
 },
 
 
-/* ================
-   WEEK 4 — Q8
-================ */
+
+/* WEEK 4 — SOAL 8 */
 
 
 {
@@ -2138,13 +2200,13 @@ week:"Week 4",
 topic:"Selection Criteria",
 
 q:
-"Faktor awal yang harus dipertimbangkan saat memilih conveyor adalah …",
+"Faktor yang harus dipertimbangkan saat memilih conveyor adalah …",
 
 options:[
 
 "Direction, distance, capacity, material, flowability, dan containment",
 
-"Warna casing dan bentuk logo alat",
+"Warna casing dan bentuk alat",
 
 "Hanya harga motor",
 
@@ -2161,9 +2223,7 @@ why:
 
 
 
-/* ==================================
-   WEEK 5 — Q9
-================================== */
+/* WEEK 5 — SOAL 9 */
 
 
 {
@@ -2195,9 +2255,8 @@ why:
 },
 
 
-/* ==================================
-   WEEK 5 — Q10
-================================== */
+
+/* WEEK 5 — SOAL 10 */
 
 
 {
@@ -2229,9 +2288,8 @@ why:
 },
 
 
-/* ==================================
-   WEEK 5 — Q11
-================================== */
+
+/* WEEK 5 — SOAL 11 */
 
 
 {
@@ -2241,7 +2299,7 @@ week:"Week 5",
 topic:"Zipper Conveyor",
 
 q:
-"Granular bulk solid perlu dipindahkan secara tertutup menggunakan mechanical chain/flight conveying. Pilihan yang sesuai adalah …",
+"Granular bulk solid perlu dipindahkan secara tertutup menggunakan mechanical chain atau flight conveying. Pilihan yang sesuai adalah …",
 
 options:[
 
@@ -2258,14 +2316,13 @@ options:[
 answer:0,
 
 why:
-"Zipper Conveyor adalah enclosed mechanical conveying berbasis chain/flight."
+"Zipper Conveyor merupakan enclosed mechanical conveying berbasis chain atau flight."
 
 },
 
 
-/* ==================================
-   WEEK 5 — Q12
-================================== */
+
+/* WEEK 5 — SOAL 12 */
 
 
 {
@@ -2283,7 +2340,7 @@ options:[
 
 "Compression antara dua jaw",
 
-"Getaran pada perforated screen",
+"Getaran pada screen",
 
 "Gravitasi di dalam bucket"
 
@@ -2297,9 +2354,8 @@ why:
 },
 
 
-/* ==================================
-   WEEK 5 — Q13
-================================== */
+
+/* WEEK 5 — SOAL 13 */
 
 
 {
@@ -2309,7 +2365,7 @@ week:"Week 5",
 topic:"Vibrating Conveyor",
 
 q:
-"Vibrating Conveyor sebaiknya dihindari atau diperiksa lebih hati-hati ketika feed …",
+"Vibrating Conveyor perlu diperiksa lebih hati-hati ketika feed …",
 
 options:[
 
@@ -2331,9 +2387,8 @@ why:
 },
 
 
-/* ==================================
-   WEEK 5 — Q14
-================================== */
+
+/* WEEK 5 — SOAL 14 */
 
 
 {
@@ -2347,13 +2402,13 @@ q:
 
 options:[
 
-"Gas velocity tinggi dan attrition/energy cenderung lebih tinggi",
+"Gas velocity tinggi dan attrition atau energy cenderung lebih tinggi",
 
 "Gas velocity sangat rendah tanpa particle suspension",
 
-"Transport menggunakan chain/flight",
+"Transport menggunakan chain atau flight",
 
-"Transport dilakukan pada open belt"
+"Transport dilakukan menggunakan open belt"
 
 ],
 
@@ -2365,9 +2420,8 @@ why:
 },
 
 
-/* ==================================
-   WEEK 5 — Q15
-================================== */
+
+/* WEEK 5 — SOAL 15 */
 
 
 {
@@ -2381,7 +2435,7 @@ q:
 
 options:[
 
-"Friction, wear, dan maintenance chain/flight",
+"Friction, wear, dan maintenance chain atau flight",
 
 "Selalu membutuhkan blower bertekanan tinggi",
 
@@ -2394,14 +2448,13 @@ options:[
 answer:0,
 
 why:
-"Zipper Conveyor menggunakan mechanical chain/flight sehingga friction, wear, dan maintenance menjadi perhatian utama."
+"Zipper Conveyor menggunakan mechanical chain atau flight sehingga friction, wear, dan maintenance menjadi perhatian."
 
 },
 
 
-/* ==================================
-   WEEK 5 — Q16
-================================== */
+
+/* WEEK 5 — SOAL 16 */
 
 
 {
@@ -2411,7 +2464,7 @@ week:"Week 5",
 topic:"Integrated Selection",
 
 q:
-"Dari peta pemilihan Week 4–5, jika kebutuhan utamanya adalah flexible closed pipeline route untuk dusty powder, pilihan utamanya adalah …",
+"Jika kebutuhan utamanya adalah flexible closed pipeline route untuk dusty powder, pilihan utamanya adalah …",
 
 options:[
 
@@ -2432,35 +2485,38 @@ why:
 
 }
 
+
 ];
 
 
 
-/* =============================================
-   PERBAIKAN TYPO STRING Q1
-============================================= */
+/* ==========================================
+   SEBAR KUNCI JAWABAN A / B / C / D
+========================================== */
 
 
-questions[0].options[2] =
-"Bucket Elevator";
+/*
 
+0 = A
+1 = B
+2 = C
+3 = D
 
+Pola:
 
-/* =============================================
-   SEBAR KUNCI JAWABAN
+B – D – A – C
+B – D – A – C
+B – D – A – C
+B – D – A – C
 
-   Pattern:
-   B D A C
-   B D A C
-   B D A C
-   B D A C
+Distribusi:
 
-   Distribusi:
-   A = 4
-   B = 4
-   C = 4
-   D = 4
-============================================= */
+A = 4
+B = 4
+C = 4
+D = 4
+
+*/
 
 
 const targetAnswerPositions = [
@@ -2483,16 +2539,22 @@ questions.forEach(
 
 
 const correctOption =
-q.options[q.answer];
+
+q.options[
+q.answer
+];
+
 
 
 const distractors =
+
 q.options.filter(
 
 (_,i)=>
 i !== q.answer
 
 );
+
 
 
 /* acak distractor */
@@ -2511,12 +2573,14 @@ i--
 
 
 const j =
+
 Math.floor(
 
 Math.random() *
 (i + 1)
 
 );
+
 
 
 [
@@ -2534,7 +2598,9 @@ distractors[i]
 }
 
 
+
 const target =
+
 targetAnswerPositions[
 
 idx %
@@ -2543,10 +2609,13 @@ targetAnswerPositions.length
 ];
 
 
+
 const rebuilt =
+
 [
 ...distractors
 ];
+
 
 
 rebuilt.splice(
@@ -2556,6 +2625,7 @@ target,
 correctOption
 
 );
+
 
 
 q.options =
@@ -2572,9 +2642,9 @@ target;
 
 
 
-/* =============================================
-   TAB NAVIGATION
-============================================= */
+/* ==========================================
+   NAVIGATION
+========================================== */
 
 
 const tabs =
@@ -2584,6 +2654,7 @@ document.querySelectorAll(
 ".nav button"
 
 );
+
 
 
 tabs.forEach(
@@ -2608,6 +2679,7 @@ b.classList.remove(
 );
 
 
+
 document
 .querySelectorAll(
 ".panel"
@@ -2623,11 +2695,13 @@ panel.classList.remove(
 );
 
 
+
 button
 .classList
 .add(
 "active"
 );
+
 
 
 document
@@ -2652,9 +2726,9 @@ button.dataset.tab
 
 
 
-/* =============================================
+/* ==========================================
    FLASHCARDS
-============================================= */
+========================================== */
 
 
 const flashGrid =
@@ -2662,6 +2736,7 @@ const flashGrid =
 document.getElementById(
 "flashGrid"
 );
+
 
 
 flashcards.forEach(
@@ -2676,12 +2751,14 @@ document.createElement(
 );
 
 
+
 card.type =
 "button";
 
 
 card.className =
 "flash";
+
 
 
 card.innerHTML = `
@@ -2707,6 +2784,7 @@ ${item.name}
 </div>
 
 
+
 <div class="back">
 
 
@@ -2726,6 +2804,7 @@ ${item.text}
 </div>
 
 
+
 <div class="hint">
 
 klik untuk membalik
@@ -2736,11 +2815,13 @@ klik untuk membalik
 `;
 
 
+
 card.addEventListener(
 
 "click",
 
 ()=>{
+
 
 card
 .classList
@@ -2748,9 +2829,11 @@ card
 "flipped"
 );
 
+
 }
 
 );
+
 
 
 flashGrid
@@ -2765,9 +2848,9 @@ card
 
 
 
-/* =============================================
+/* ==========================================
    QUIZ VARIABLES
-============================================= */
+========================================== */
 
 
 let currentQuestion =
@@ -2780,6 +2863,7 @@ let score =
 
 let answered =
 false;
+
 
 
 let scoreByWeek = {
@@ -2863,9 +2947,9 @@ document.getElementById(
 
 
 
-/* =============================================
+/* ==========================================
    RENDER QUESTION
-============================================= */
+========================================== */
 
 
 function renderQuestion(){
@@ -2875,10 +2959,13 @@ answered =
 false;
 
 
+
 const q =
+
 questions[
 currentQuestion
 ];
+
 
 
 qMeta.textContent =
@@ -2886,9 +2973,11 @@ qMeta.textContent =
 `Soal ${currentQuestion + 1} dari ${questions.length}`;
 
 
+
 scoreMeta.textContent =
 
 `Skor: ${score}`;
+
 
 
 progressBar.style.width =
@@ -2905,9 +2994,11 @@ questions.length
 }%`;
 
 
+
 qWeek.textContent =
 
 `${q.week} • ${q.topic}`;
+
 
 
 questionBox.textContent =
@@ -2915,8 +3006,10 @@ questionBox.textContent =
 q.q;
 
 
+
 optionsBox.innerHTML =
 "";
+
 
 
 feedbackBox.className =
@@ -2924,13 +3017,16 @@ feedbackBox.className =
 "feedback";
 
 
+
 feedbackBox.textContent =
 "";
+
 
 
 nextButton.style.display =
 
 "none";
+
 
 
 q.options.forEach(
@@ -2945,12 +3041,14 @@ document.createElement(
 );
 
 
+
 button.type =
 "button";
 
 
 button.className =
 "option";
+
 
 
 button.textContent =
@@ -2964,11 +3062,13 @@ String.fromCharCode(
 }. ${option}`;
 
 
+
 button.addEventListener(
 
 "click",
 
 ()=>{
+
 
 checkAnswer(
 
@@ -2977,9 +3077,11 @@ button
 
 );
 
+
 }
 
 );
+
 
 
 optionsBox
@@ -2997,9 +3099,9 @@ button
 
 
 
-/* =============================================
+/* ==========================================
    CHECK ANSWER
-============================================= */
+========================================== */
 
 
 function checkAnswer(
@@ -3017,8 +3119,10 @@ return;
 }
 
 
+
 answered =
 true;
+
 
 
 const q =
@@ -3028,9 +3132,11 @@ currentQuestion
 ];
 
 
+
 scoreByWeek[
 q.week
 ][1]++;
+
 
 
 const optionButtons =
@@ -3040,6 +3146,7 @@ const optionButtons =
 ];
 
 
+
 optionButtons.forEach(
 
 (button,index)=>{
@@ -3047,6 +3154,7 @@ optionButtons.forEach(
 
 button.disabled =
 true;
+
 
 
 if(
@@ -3084,9 +3192,11 @@ q.answer
 score++;
 
 
+
 scoreByWeek[
 q.week
 ][0]++;
+
 
 
 clickedButton
@@ -3096,10 +3206,12 @@ clickedButton
 );
 
 
+
 feedbackBox.textContent =
 
 "✓ Benar. " +
 q.why;
+
 
 
 feedbackBox.className =
@@ -3120,10 +3232,12 @@ clickedButton
 );
 
 
+
 feedbackBox.textContent =
 
 "✕ Belum tepat. " +
 q.why;
+
 
 
 feedbackBox.className =
@@ -3178,9 +3292,9 @@ nextButton.style.display =
 
 
 
-/* =============================================
+/* ==========================================
    NEXT QUESTION
-============================================= */
+========================================== */
 
 
 nextButton.addEventListener(
@@ -3199,6 +3313,7 @@ if(
 return;
 
 }
+
 
 
 if(
@@ -3233,9 +3348,9 @@ showResult();
 
 
 
-/* =============================================
+/* ==========================================
    RESULT
-============================================= */
+========================================== */
 
 
 function showResult(){
@@ -3246,9 +3361,11 @@ quizBox.style.display =
 "none";
 
 
+
 resultBox.style.display =
 
 "block";
+
 
 
 const percent =
@@ -3277,6 +3394,7 @@ document
 let message;
 
 
+
 if(
 
 percent >= 85
@@ -3286,7 +3404,7 @@ percent >= 85
 
 message =
 
-"Sangat baik. Pemilihan conveyor Week 4–5 sudah kuat.";
+"Sangat baik. Pemilihan Solid Handling & Conveying Equipment sudah kuat.";
 
 
 }
@@ -3312,7 +3430,7 @@ else{
 
 message =
 
-"Perlu review lagi. Mulai dari route → feed → containment → mekanisme alat.";
+"Perlu review lagi. Fokus pada route → feed → containment → mekanisme alat.";
 
 
 }
@@ -3337,8 +3455,10 @@ document.getElementById(
 );
 
 
+
 breakdown.innerHTML =
 "";
+
 
 
 Object.entries(
@@ -3359,6 +3479,7 @@ document.createElement(
 );
 
 
+
 const pct =
 
 value[1] === 0
@@ -3376,6 +3497,7 @@ value[1] *
 100
 
 );
+
 
 
 box.innerHTML = `
@@ -3419,6 +3541,7 @@ ${pct}%
 `;
 
 
+
 breakdown
 .appendChild(
 box
@@ -3434,9 +3557,9 @@ box
 
 
 
-/* =============================================
+/* ==========================================
    RESET QUIZ
-============================================= */
+========================================== */
 
 
 function resetQuiz(){
@@ -3454,6 +3577,7 @@ answered =
 false;
 
 
+
 scoreByWeek = {
 
 "Week 4":[0,0],
@@ -3463,14 +3587,17 @@ scoreByWeek = {
 };
 
 
+
 quizBox.style.display =
 
 "block";
 
 
+
 resultBox.style.display =
 
 "none";
+
 
 
 renderQuestion();
@@ -3510,9 +3637,9 @@ resetQuiz
 
 
 
-/* =============================================
+/* ==========================================
    START
-============================================= */
+========================================== */
 
 
 renderQuestion();

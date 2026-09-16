@@ -1,0 +1,3526 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+AIK Interactive Review — Week 4–5
+</title>
+
+<style>
+
+:root{
+
+--navy:#153452;
+
+--blue:#2f6fa5;
+
+--teal:#367d70;
+
+--gold:#b28734;
+
+--ink:#23364b;
+
+--muted:#69798b;
+
+--line:#d8e0e7;
+
+--paper:#fbfaf7;
+
+--soft:#f3f6f8;
+
+--ok:#24734f;
+
+--okbg:#e9f5ef;
+
+--bad:#a2443f;
+
+--badbg:#faeceb;
+
+}
+
+
+*{
+box-sizing:border-box;
+}
+
+
+body{
+
+margin:0;
+
+font-family:
+Arial,
+Helvetica,
+sans-serif;
+
+color:var(--ink);
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#f5f1e8 0,
+
+#fafafa 220px,
+
+#f6f7f8 100%
+
+);
+
+}
+
+
+.container{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:
+28px 18px 50px;
+
+}
+
+
+.hero{
+
+background:
+var(--paper);
+
+border:
+1px solid #ded8cb;
+
+border-radius:
+22px;
+
+padding:
+30px;
+
+box-shadow:
+0 10px 30px
+rgba(30,48,66,.07);
+
+}
+
+
+.eyebrow{
+
+font-family:
+Georgia,
+serif;
+
+letter-spacing:
+.16em;
+
+text-transform:
+uppercase;
+
+color:
+var(--gold);
+
+font-weight:
+bold;
+
+font-size:
+13px;
+
+}
+
+
+h1,
+h2,
+h3{
+
+font-family:
+Georgia,
+serif;
+
+color:
+var(--navy);
+
+margin:
+0;
+
+}
+
+
+h1{
+
+font-size:
+clamp(
+34px,
+5vw,
+54px
+);
+
+margin-top:
+8px;
+
+}
+
+
+.subtitle{
+
+font-size:
+18px;
+
+color:
+var(--muted);
+
+max-width:
+850px;
+
+line-height:
+1.55;
+
+margin-top:
+14px;
+
+}
+
+
+.rule{
+
+height:
+2px;
+
+background:
+var(--gold);
+
+margin:
+24px 0 18px;
+
+}
+
+
+.nav{
+
+display:
+flex;
+
+gap:
+10px;
+
+flex-wrap:
+wrap;
+
+margin:
+22px 0;
+
+}
+
+
+.nav button,
+.btn{
+
+border:
+1px solid var(--line);
+
+background:
+white;
+
+color:
+var(--navy);
+
+padding:
+11px 17px;
+
+border-radius:
+10px;
+
+font-weight:
+bold;
+
+cursor:
+pointer;
+
+font-size:
+15px;
+
+min-height:
+44px;
+
+transition:
+.15s;
+
+}
+
+
+.nav button:hover,
+.btn:hover{
+
+transform:
+translateY(-1px);
+
+}
+
+
+.nav button.active,
+.btn.primary{
+
+background:
+var(--navy);
+
+color:
+white;
+
+border-color:
+var(--navy);
+
+}
+
+
+.panel{
+
+display:
+none;
+
+}
+
+
+.panel.active{
+
+display:
+block;
+
+}
+
+
+/* ==========================
+   SUMMARY
+========================== */
+
+
+.week-grid{
+
+display:
+grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:
+18px;
+
+}
+
+
+.week-card{
+
+background:
+white;
+
+border:
+1px solid var(--line);
+
+border-top:
+5px solid var(--blue);
+
+border-radius:
+14px;
+
+padding:
+20px;
+
+}
+
+
+.week-card.week5{
+
+border-top-color:
+var(--teal);
+
+}
+
+
+.week-label{
+
+font-size:
+13px;
+
+font-weight:
+bold;
+
+letter-spacing:
+.08em;
+
+text-transform:
+uppercase;
+
+color:
+var(--muted);
+
+}
+
+
+.week-card h3{
+
+font-size:
+23px;
+
+margin:
+6px 0 14px;
+
+}
+
+
+.equipment{
+
+padding:
+12px 0;
+
+border-top:
+1px solid #edf0f3;
+
+}
+
+
+.equipment:first-of-type{
+
+border-top:
+none;
+
+}
+
+
+.equipment b{
+
+display:
+block;
+
+font-size:
+16px;
+
+color:
+var(--navy);
+
+margin-bottom:
+4px;
+
+}
+
+
+.equipment span{
+
+color:
+var(--muted);
+
+line-height:
+1.45;
+
+}
+
+
+.quick-grid{
+
+display:
+grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:
+14px;
+
+margin-top:
+16px;
+
+}
+
+
+.quick{
+
+background:
+white;
+
+border:
+1px solid var(--line);
+
+border-radius:
+12px;
+
+padding:
+17px;
+
+}
+
+
+.quick h3{
+
+font-size:
+18px;
+
+margin-bottom:
+8px;
+
+}
+
+
+.quick p{
+
+margin:
+0;
+
+color:
+var(--muted);
+
+line-height:
+1.55;
+
+}
+
+
+.selection-map{
+
+margin-top:
+18px;
+
+background:
+white;
+
+border:
+1px solid var(--line);
+
+border-radius:
+14px;
+
+padding:
+20px;
+
+}
+
+
+.selection-map h3{
+
+font-size:
+20px;
+
+margin-bottom:
+15px;
+
+}
+
+
+.route-grid{
+
+display:
+grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:
+10px;
+
+}
+
+
+.route{
+
+background:
+var(--soft);
+
+border-radius:
+10px;
+
+padding:
+13px;
+
+min-height:
+100px;
+
+}
+
+
+.route b{
+
+display:
+block;
+
+color:
+var(--navy);
+
+margin-bottom:
+6px;
+
+}
+
+
+.route span{
+
+color:
+var(--muted);
+
+line-height:
+1.4;
+
+font-size:
+14px;
+
+}
+
+
+.note{
+
+margin-top:
+18px;
+
+padding:
+14px 16px;
+
+background:
+white;
+
+border-left:
+4px solid var(--gold);
+
+color:
+var(--muted);
+
+line-height:
+1.55;
+
+}
+
+
+/* ==========================
+   FLASHCARDS
+========================== */
+
+
+.flash-wrap{
+
+display:
+grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:
+14px;
+
+}
+
+
+.flash{
+
+min-height:
+190px;
+
+border:
+1px solid var(--line);
+
+border-radius:
+14px;
+
+background:
+white;
+
+padding:
+20px;
+
+cursor:
+pointer;
+
+position:
+relative;
+
+display:
+flex;
+
+align-items:
+center;
+
+justify-content:
+center;
+
+text-align:
+center;
+
+color:
+var(--ink);
+
+}
+
+
+.flash:hover{
+
+border-color:
+#9fb4c6;
+
+}
+
+
+.flash .front h3{
+
+font-size:
+21px;
+
+margin-top:
+10px;
+
+}
+
+
+.flash .back{
+
+display:
+none;
+
+color:
+var(--muted);
+
+line-height:
+1.55;
+
+}
+
+
+.flash.flipped .front{
+
+display:
+none;
+
+}
+
+
+.flash.flipped .back{
+
+display:
+block;
+
+}
+
+
+.flash .hint{
+
+position:
+absolute;
+
+bottom:
+10px;
+
+left:
+0;
+
+right:
+0;
+
+font-size:
+12px;
+
+color:
+#96a1ad;
+
+}
+
+
+/* ==========================
+   QUIZ
+========================== */
+
+
+.quiz-shell{
+
+background:
+white;
+
+border:
+1px solid var(--line);
+
+border-radius:
+16px;
+
+padding:
+22px;
+
+box-shadow:
+0 6px 22px
+rgba(20,50,82,.05);
+
+}
+
+
+.quiz-meta{
+
+display:
+flex;
+
+justify-content:
+space-between;
+
+flex-wrap:
+wrap;
+
+gap:
+10px;
+
+color:
+var(--muted);
+
+font-size:
+14px;
+
+}
+
+
+.progress{
+
+height:
+8px;
+
+background:
+#edf1f4;
+
+border-radius:
+999px;
+
+overflow:
+hidden;
+
+margin:
+12px 0 20px;
+
+}
+
+
+.progress div{
+
+height:
+100%;
+
+background:
+var(--blue);
+
+width:
+0;
+
+transition:
+.25s;
+
+}
+
+
+.question{
+
+font-family:
+Georgia,
+serif;
+
+font-size:
+24px;
+
+color:
+var(--navy);
+
+line-height:
+1.4;
+
+margin:
+8px 0 18px;
+
+}
+
+
+.options{
+
+display:
+grid;
+
+gap:
+10px;
+
+}
+
+
+.option{
+
+width:
+100%;
+
+text-align:
+left;
+
+background:
+white;
+
+border:
+1px solid var(--line);
+
+padding:
+13px 15px;
+
+border-radius:
+10px;
+
+cursor:
+pointer;
+
+font-size:
+16px;
+
+min-height:
+50px;
+
+color:
+var(--ink);
+
+}
+
+
+.option:hover{
+
+border-color:
+#9fb4c6;
+
+background:
+#fafcfd;
+
+}
+
+
+.option.correct{
+
+background:
+var(--okbg);
+
+border-color:
+#8bc5a9;
+
+color:
+#145c3d;
+
+}
+
+
+.option.wrong{
+
+background:
+var(--badbg);
+
+border-color:
+#dfaaa7;
+
+color:
+#8b3935;
+
+}
+
+
+.option:disabled{
+
+cursor:
+default;
+
+}
+
+
+.feedback{
+
+display:
+none;
+
+margin-top:
+15px;
+
+padding:
+13px;
+
+border-radius:
+10px;
+
+line-height:
+1.5;
+
+}
+
+
+.feedback.show{
+
+display:
+block;
+
+}
+
+
+.feedback.good{
+
+background:
+var(--okbg);
+
+color:
+#145c3d;
+
+}
+
+
+.feedback.bad{
+
+background:
+var(--badbg);
+
+color:
+#8b3935;
+
+}
+
+
+.quiz-actions{
+
+display:
+flex;
+
+justify-content:
+space-between;
+
+gap:
+10px;
+
+margin-top:
+18px;
+
+flex-wrap:
+wrap;
+
+}
+
+
+.scorebox{
+
+display:
+none;
+
+text-align:
+center;
+
+background:
+white;
+
+border:
+1px solid var(--line);
+
+border-radius:
+16px;
+
+padding:
+28px;
+
+}
+
+
+.scorebig{
+
+font-family:
+Georgia,
+serif;
+
+font-size:
+54px;
+
+color:
+var(--navy);
+
+font-weight:
+bold;
+
+margin:
+12px 0;
+
+}
+
+
+.breakdown{
+
+display:
+grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:
+12px;
+
+margin:
+20px 0;
+
+}
+
+
+.breakdown div{
+
+padding:
+15px;
+
+border:
+1px solid var(--line);
+
+border-radius:
+10px;
+
+background:
+var(--soft);
+
+}
+
+
+.footer{
+
+text-align:
+center;
+
+margin-top:
+28px;
+
+font-size:
+13px;
+
+color:
+#8a96a3;
+
+}
+
+
+@media(max-width:900px){
+
+.flash-wrap{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+.route-grid{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+}
+
+
+@media(max-width:750px){
+
+.week-grid,
+.quick-grid,
+.breakdown{
+
+grid-template-columns:
+1fr;
+
+}
+
+}
+
+
+@media(max-width:580px){
+
+.hero{
+
+padding:
+21px;
+
+}
+
+.flash-wrap,
+.route-grid{
+
+grid-template-columns:
+1fr;
+
+}
+
+.question{
+
+font-size:
+21px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<section class="hero">
+
+
+<div class="eyebrow">
+
+Alat Industri Kimia • Interactive Review
+
+</div>
+
+
+<h1>
+
+Week 4–5
+
+</h1>
+
+
+<p class="subtitle">
+
+Solid Handling & Conveying Equipment.
+Review prinsip kerja, karakter feed,
+kebutuhan lintasan, containment,
+serta pemilihan conveyor yang tepat.
+
+</p>
+
+
+<div class="rule"></div>
+
+
+<div class="nav">
+
+
+<button
+class="active"
+data-tab="summary">
+
+Ringkasan
+
+</button>
+
+
+<button
+data-tab="flashcards">
+
+Flashcards
+
+</button>
+
+
+<button
+data-tab="quiz">
+
+Quiz
+
+</button>
+
+
+</div>
+
+
+
+<!-- ===================================
+     SUMMARY
+=================================== -->
+
+
+<div
+id="summary"
+class="panel active">
+
+
+<div class="week-grid">
+
+
+<!-- WEEK 4 -->
+
+
+<div class="week-card">
+
+
+<div class="week-label">
+
+Week 4
+
+</div>
+
+
+<h3>
+
+Basic Conveying Equipment
+
+</h3>
+
+
+<div class="equipment">
+
+<b>
+Screw Conveyor
+</b>
+
+<span>
+Rotating helical screw;
+compact dan enclosed;
+cocok untuk powder/granular
+jarak pendek–menengah.
+</span>
+
+</div>
+
+
+<div class="equipment">
+
+<b>
+Belt Conveyor
+</b>
+
+<span>
+Material dibawa di atas endless belt;
+unggul untuk jarak panjang,
+capacity tinggi,
+dan gentle handling.
+</span>
+
+</div>
+
+
+<div class="equipment">
+
+<b>
+Flight Conveyor
+</b>
+
+<span>
+Chain dengan flights/paddles
+menyeret bulk solid di dalam trough;
+enclosed drag conveying.
+</span>
+
+</div>
+
+
+<div class="equipment">
+
+<b>
+Overhead Conveyor
+</b>
+
+<span>
+Unit load digantung pada trolley/carrier
+di overhead track;
+membebaskan floor space.
+</span>
+
+</div>
+
+
+<div class="equipment">
+
+<b>
+Bucket Elevator
+</b>
+
+<span>
+Buckets pada belt/chain
+mengangkat bulk solid secara vertikal
+dengan footprint kecil.
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<!-- WEEK 5 -->
+
+
+<div class="week-card week5">
+
+
+<div class="week-label">
+
+Week 5
+
+</div>
+
+
+<h3>
+
+Advanced Conveying Equipment
+
+</h3>
+
+
+<div class="equipment">
+
+<b>
+Vibrating Conveyor
+</b>
+
+<span>
+Vibration/inertia pada trough atau pan;
+cocok untuk short–medium conveying
+dan controlled feeding.
+</span>
+
+</div>
+
+
+<div class="equipment">
+
+<b>
+Pneumatic Conveyor
+</b>
+
+<span>
+Gas/udara memberikan drag pada partikel
+di closed pipeline;
+routing sangat fleksibel.
+</span>
+
+</div>
+
+
+<div class="equipment">
+
+<b>
+Zipper Conveyor
+</b>
+
+<span>
+Enclosed mechanical conveying
+menggunakan chain/flight;
+controlled bulk transport.
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="quick-grid">
+
+
+<div class="quick">
+
+<h3>
+Sebelum Memilih Conveyor
+</h3>
+
+<p>
+
+Cek direction,
+distance,
+capacity,
+particle form,
+flowability,
+moisture,
+abrasiveness,
+fragility,
+serta kebutuhan dust containment.
+
+</p>
+
+</div>
+
+
+<div class="quick">
+
+<h3>
+Week 5 Menambah Apa?
+</h3>
+
+<p>
+
+Pilihan untuk kondisi khusus:
+controlled vibratory feeding,
+closed flexible pipeline,
+atau enclosed mechanical
+chain/flight conveying.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<div class="selection-map">
+
+
+<h3>
+
+Quick Selection Map
+
+</h3>
+
+
+<div class="route-grid">
+
+
+<div class="route">
+
+<b>
+Long Horizontal
+</b>
+
+<span>
+BELT —
+capacity tinggi
+dan gentle handling.
+</span>
+
+</div>
+
+
+<div class="route">
+
+<b>
+Compact + Enclosed
+</b>
+
+<span>
+SCREW / FLIGHT / ZIPPER —
+controlled transport
+untuk bulk solids.
+</span>
+
+</div>
+
+
+<div class="route">
+
+<b>
+Vertical Bulk
+</b>
+
+<span>
+BUCKET ELEVATOR —
+beda elevasi besar
+dengan footprint kecil.
+</span>
+
+</div>
+
+
+<div class="route">
+
+<b>
+Flexible Pipeline
+</b>
+
+<span>
+PNEUMATIC —
+closed transfer,
+terutama untuk powder/granular
+yang sesuai.
+</span>
+
+</div>
+
+
+<div class="route">
+
+<b>
+Controlled Feeding
+</b>
+
+<span>
+VIBRATING —
+short route
+dengan feed relatif stabil.
+</span>
+
+</div>
+
+
+<div class="route">
+
+<b>
+Unit Load + Free Floor
+</b>
+
+<span>
+OVERHEAD —
+routing antar workstation
+tanpa memakai floor space.
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="note">
+
+<b>
+Ingat:
+</b>
+
+jangan memilih conveyor dari nama alat.
+
+Mulai dari
+
+<b>
+route → distance → feed → containment → gentleness → energy.
+</b>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ===================================
+     FLASHCARDS
+=================================== -->
+
+
+<div
+id="flashcards"
+class="panel">
+
+
+<p
+style="
+color:#69798b;
+margin-top:0;
+">
+
+Klik kartu untuk melihat jawabannya.
+
+</p>
+
+
+<div
+id="flashGrid"
+class="flash-wrap">
+</div>
+
+
+</div>
+
+
+
+<!-- ===================================
+     QUIZ
+=================================== -->
+
+
+<div
+id="quiz"
+class="panel">
+
+
+<div
+id="quizBox"
+class="quiz-shell">
+
+
+<div class="quiz-meta">
+
+<span id="qMeta"></span>
+
+<span id="scoreMeta"></span>
+
+</div>
+
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+
+<div
+id="qWeek"
+class="week-label">
+</div>
+
+
+<div
+id="question"
+class="question">
+</div>
+
+
+<div
+id="options"
+class="options">
+</div>
+
+
+<div
+id="feedback"
+class="feedback">
+</div>
+
+
+<div class="quiz-actions">
+
+
+<button
+id="resetQuiz"
+class="btn">
+
+Reset Quiz
+
+</button>
+
+
+<button
+id="nextBtn"
+class="btn primary"
+style="display:none">
+
+Soal berikutnya →
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<div
+id="resultBox"
+class="scorebox">
+
+
+<div class="eyebrow">
+
+HASIL QUIZ
+
+</div>
+
+
+<div
+id="finalScore"
+class="scorebig">
+</div>
+
+
+<p
+id="finalMessage"
+style="
+color:#69798b;
+font-size:17px;
+">
+
+</p>
+
+
+<div
+id="breakdown"
+class="breakdown">
+</div>
+
+
+<button
+id="restartQuiz"
+class="btn primary">
+
+Ulangi Quiz
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<div class="footer">
+
+Program Studi Teknik Kimia • UPN “Veteran” Jawa Timur
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =============================================
+   FLASHCARD DATA
+============================================= */
+
+
+const flashcards = [
+
+
+{
+
+week:"Week 4",
+
+name:"Screw Conveyor",
+
+text:
+"Helical screw berputar memberi push/drag pada bulk solid. Cocok untuk powder/granular, short–medium distance, compact, dan enclosed. Waspadai wear dan build-up."
+
+},
+
+
+{
+
+week:"Week 4",
+
+name:"Belt Conveyor",
+
+text:
+"Material dibawa di atas moving endless belt. Cocok untuk medium–long distance, high capacity, dan gentle handling. Waspadai dust/spillage serta sticky material."
+
+},
+
+
+{
+
+week:"Week 4",
+
+name:"Flight Conveyor",
+
+text:
+"Chain dengan flights/paddles menyeret bulk solid di dalam trough. Cocok untuk enclosed controlled drag transport. Waspadai friction, wear, dan degradation."
+
+},
+
+
+{
+
+week:"Week 4",
+
+name:"Overhead Conveyor",
+
+text:
+"Trolley/carrier bergerak pada overhead track dengan load tergantung di bawahnya. Cocok untuk unit load dan routing antar workstation sambil menjaga floor space tetap bebas."
+
+},
+
+
+{
+
+week:"Week 4",
+
+name:"Bucket Elevator",
+
+text:
+"Buckets pada belt/chain mengambil material di boot lalu mengangkatnya menuju head. Cocok untuk vertical lift bulk solid dengan footprint kecil."
+
+},
+
+
+{
+
+week:"Week 5",
+
+name:"Vibrating Conveyor",
+
+text:
+"Trough/pan digetarkan sehingga material maju akibat vibration, inertia, dan friction. Cocok untuk short–medium conveying serta controlled feeding."
+
+},
+
+
+{
+
+week:"Week 5",
+
+name:"Pneumatic Conveyor",
+
+text:
+"Udara atau gas memberi drag force sehingga partikel bergerak di dalam closed pipeline. Cocok untuk route fleksibel dan dust containment."
+
+},
+
+
+{
+
+week:"Week 5",
+
+name:"Zipper Conveyor",
+
+text:
+"Chain/flight bergerak di dalam closed casing dan membawa atau menyeret bulk solid menuju discharge. Cocok untuk enclosed mechanical controlled conveying."
+
+}
+
+];
+
+
+
+/* =============================================
+   QUIZ DATA
+
+   Semua jawaban benar awalnya index 0,
+   lalu posisi akan disebar oleh script.
+============================================= */
+
+
+const questions = [
+
+
+/* ================
+   WEEK 4 — Q1
+================ */
+
+
+{
+
+week:"Week 4",
+
+topic:"Equipment Selection",
+
+q:
+"Granular solid harus dipindahkan sekitar 80 m secara horizontal dengan capacity besar. Alat yang paling sesuai adalah …",
+
+options:[
+
+"Belt Conveyor",
+
+"Screw Conveyor",
+
+BucketText = "Bucket Elevator",
+
+"Overhead Conveyor"
+
+],
+
+answer:0,
+
+why:
+"Belt Conveyor cocok untuk medium–long distance, capacity tinggi, dan gentle handling."
+
+},
+
+
+/* ================
+   WEEK 4 — Q2
+================ */
+
+
+{
+
+week:"Week 4",
+
+topic:"Equipment Selection",
+
+q:
+"Powder berdebu perlu dipindahkan pada jarak pendek dan sistem harus compact serta tertutup. Pilihan yang sesuai adalah …",
+
+options:[
+
+"Screw Conveyor",
+
+"Belt Conveyor",
+
+"Overhead Conveyor",
+
+"Bucket Elevator"
+
+],
+
+answer:0,
+
+why:
+"Screw Conveyor compact dan enclosed serta cocok untuk powder/granular pada jarak pendek–menengah."
+
+},
+
+
+/* ================
+   WEEK 4 — Q3
+================ */
+
+
+{
+
+week:"Week 4",
+
+topic:"Vertical Handling",
+
+q:
+"Granular solid harus dinaikkan secara vertikal dengan beda elevasi besar dan footprint lantai kecil. Pilihan yang sesuai adalah …",
+
+options:[
+
+"Bucket Elevator",
+
+"Belt Conveyor",
+
+"Flight Conveyor",
+
+"Overhead Conveyor"
+
+],
+
+answer:0,
+
+why:
+"Bucket Elevator ditujukan untuk vertical lifting bulk solids dengan footprint kecil."
+
+},
+
+
+/* ================
+   WEEK 4 — Q4
+================ */
+
+
+{
+
+week:"Week 4",
+
+topic:"Unit Load",
+
+q:
+"Komponen dalam container harus melewati beberapa workstation dan area lantai harus tetap bebas. Alat yang sesuai adalah …",
+
+options:[
+
+"Overhead Conveyor",
+
+"Screw Conveyor",
+
+"Bucket Elevator",
+
+"Flight Conveyor"
+
+],
+
+answer:0,
+
+why:
+"Overhead Conveyor memanfaatkan ruang vertikal dan cocok untuk unit load serta plant routing."
+
+},
+
+
+/* ================
+   WEEK 4 — Q5
+================ */
+
+
+{
+
+week:"Week 4",
+
+topic:"Mechanism",
+
+q:
+"Prinsip kerja Flight Conveyor adalah …",
+
+options:[
+
+"Chain dengan flights menyeret material di sepanjang trough",
+
+"Udara membawa partikel melalui pipeline",
+
+"Bucket mengangkat material secara vertikal",
+
+"Endless belt membawa material tanpa drag"
+
+],
+
+answer:0,
+
+why:
+"Flight Conveyor menggunakan chain dengan flights/paddles untuk drag conveying di dalam trough."
+
+},
+
+
+/* ================
+   WEEK 4 — Q6
+================ */
+
+
+{
+
+week:"Week 4",
+
+topic:"Screw Conveyor",
+
+q:
+"Masalah yang perlu diperhatikan ketika Screw Conveyor menangani material sticky adalah …",
+
+options:[
+
+"Build-up di dalam trough atau casing",
+
+"Tidak adanya gaya drag",
+
+"Tidak dapat dibuat enclosed",
+
+"Floor space selalu terlalu besar"
+
+],
+
+answer:0,
+
+why:
+"Sticky solids dapat mengalami build-up pada Screw Conveyor."
+
+},
+
+
+/* ================
+   WEEK 4 — Q7
+================ */
+
+
+{
+
+week:"Week 4",
+
+topic:"Belt Conveyor",
+
+q:
+"Keunggulan utama Belt Conveyor dibanding drag conveyor untuk long-distance transport adalah …",
+
+options:[
+
+"Capacity tinggi dan handling relatif gentle",
+
+"Selalu completely enclosed",
+
+"Paling tepat untuk vertical lift",
+
+"Memakai pressure gas tinggi"
+
+],
+
+answer:0,
+
+why:
+"Belt Conveyor relatif efisien, mampu capacity tinggi, cocok untuk jarak panjang, dan memberikan gentle handling."
+
+},
+
+
+/* ================
+   WEEK 4 — Q8
+================ */
+
+
+{
+
+week:"Week 4",
+
+topic:"Selection Criteria",
+
+q:
+"Faktor awal yang harus dipertimbangkan saat memilih conveyor adalah …",
+
+options:[
+
+"Direction, distance, capacity, material, flowability, dan containment",
+
+"Warna casing dan bentuk logo alat",
+
+"Hanya harga motor",
+
+"Hanya diameter partikel"
+
+],
+
+answer:0,
+
+why:
+"Pemilihan conveyor harus mempertimbangkan geometri perpindahan dan karakter material secara bersama-sama."
+
+},
+
+
+
+/* ==================================
+   WEEK 5 — Q9
+================================== */
+
+
+{
+
+week:"Week 5",
+
+topic:"Vibrating Conveyor",
+
+q:
+"Granular solid perlu diumpankan secara stabil ke unit proses pada jarak pendek. Pilihan yang sesuai adalah …",
+
+options:[
+
+"Vibrating Conveyor",
+
+"Pneumatic Conveyor",
+
+"Overhead Conveyor",
+
+"Bucket Elevator"
+
+],
+
+answer:0,
+
+why:
+"Vibrating Conveyor sesuai untuk controlled short-distance conveying sekaligus feeding."
+
+},
+
+
+/* ==================================
+   WEEK 5 — Q10
+================================== */
+
+
+{
+
+week:"Week 5",
+
+topic:"Pneumatic Conveyor",
+
+q:
+"Powder sangat berdebu harus dipindahkan melalui rute kompleks dan sistem tertutup. Alat yang paling sesuai adalah …",
+
+options:[
+
+"Pneumatic Conveyor",
+
+"Vibrating Conveyor",
+
+"Belt Conveyor",
+
+"Overhead Conveyor"
+
+],
+
+answer:0,
+
+why:
+"Pneumatic Conveyor menggunakan closed pipeline dan memiliki routing yang sangat fleksibel."
+
+},
+
+
+/* ==================================
+   WEEK 5 — Q11
+================================== */
+
+
+{
+
+week:"Week 5",
+
+topic:"Zipper Conveyor",
+
+q:
+"Granular bulk solid perlu dipindahkan secara tertutup menggunakan mechanical chain/flight conveying. Pilihan yang sesuai adalah …",
+
+options:[
+
+"Zipper Conveyor",
+
+"Pneumatic Conveyor",
+
+"Vibrating Conveyor",
+
+"Belt Conveyor"
+
+],
+
+answer:0,
+
+why:
+"Zipper Conveyor adalah enclosed mechanical conveying berbasis chain/flight."
+
+},
+
+
+/* ==================================
+   WEEK 5 — Q12
+================================== */
+
+
+{
+
+week:"Week 5",
+
+topic:"Mechanism",
+
+q:
+"Gaya utama yang membawa partikel pada Pneumatic Conveyor adalah …",
+
+options:[
+
+"Drag force dari aliran gas atau udara",
+
+"Compression antara dua jaw",
+
+"Getaran pada perforated screen",
+
+"Gravitasi di dalam bucket"
+
+],
+
+answer:0,
+
+why:
+"Aliran udara atau gas memberikan drag force pada partikel sehingga padatan bergerak melalui pipeline."
+
+},
+
+
+/* ==================================
+   WEEK 5 — Q13
+================================== */
+
+
+{
+
+week:"Week 5",
+
+topic:"Vibrating Conveyor",
+
+q:
+"Vibrating Conveyor sebaiknya dihindari atau diperiksa lebih hati-hati ketika feed …",
+
+options:[
+
+"Sangat sticky atau proses sensitif terhadap vibration",
+
+"Relatif kering dan granular",
+
+"Membutuhkan controlled feeding",
+
+"Menempuh short route"
+
+],
+
+answer:0,
+
+why:
+"Sticky material dapat build-up dan vibration dapat menjadi masalah bagi struktur atau proses yang sensitif."
+
+},
+
+
+/* ==================================
+   WEEK 5 — Q14
+================================== */
+
+
+{
+
+week:"Week 5",
+
+topic:"Pneumatic Conveying",
+
+q:
+"Ciri yang lebih dekat dengan dilute-phase pneumatic conveying adalah …",
+
+options:[
+
+"Gas velocity tinggi dan attrition/energy cenderung lebih tinggi",
+
+"Gas velocity sangat rendah tanpa particle suspension",
+
+"Transport menggunakan chain/flight",
+
+"Transport dilakukan pada open belt"
+
+],
+
+answer:0,
+
+why:
+"Dilute phase menggunakan kecepatan gas lebih tinggi dengan partikel banyak tersuspensi dan dapat meningkatkan attrition serta energy demand."
+
+},
+
+
+/* ==================================
+   WEEK 5 — Q15
+================================== */
+
+
+{
+
+week:"Week 5",
+
+topic:"Zipper Conveyor",
+
+q:
+"Trade-off utama Zipper Conveyor yang perlu diperhatikan adalah …",
+
+options:[
+
+"Friction, wear, dan maintenance chain/flight",
+
+"Selalu membutuhkan blower bertekanan tinggi",
+
+"Tidak dapat dibuat enclosed",
+
+"Tidak memiliki moving parts"
+
+],
+
+answer:0,
+
+why:
+"Zipper Conveyor menggunakan mechanical chain/flight sehingga friction, wear, dan maintenance menjadi perhatian utama."
+
+},
+
+
+/* ==================================
+   WEEK 5 — Q16
+================================== */
+
+
+{
+
+week:"Week 5",
+
+topic:"Integrated Selection",
+
+q:
+"Dari peta pemilihan Week 4–5, jika kebutuhan utamanya adalah flexible closed pipeline route untuk dusty powder, pilihan utamanya adalah …",
+
+options:[
+
+"Pneumatic Conveyor",
+
+"Belt Conveyor",
+
+"Overhead Conveyor",
+
+"Bucket Elevator"
+
+],
+
+answer:0,
+
+why:
+"Pneumatic Conveyor unggul untuk closed transfer melalui pipeline dengan routing yang fleksibel."
+
+}
+
+];
+
+
+
+/* =============================================
+   PERBAIKAN TYPO STRING Q1
+============================================= */
+
+
+questions[0].options[2] =
+"Bucket Elevator";
+
+
+
+/* =============================================
+   SEBAR KUNCI JAWABAN
+
+   Pattern:
+   B D A C
+   B D A C
+   B D A C
+   B D A C
+
+   Distribusi:
+   A = 4
+   B = 4
+   C = 4
+   D = 4
+============================================= */
+
+
+const targetAnswerPositions = [
+
+1,3,0,2,
+
+1,3,0,2,
+
+1,3,0,2,
+
+1,3,0,2
+
+];
+
+
+
+questions.forEach(
+
+(q,idx)=>{
+
+
+const correctOption =
+q.options[q.answer];
+
+
+const distractors =
+q.options.filter(
+
+(_,i)=>
+i !== q.answer
+
+);
+
+
+/* acak distractor */
+
+
+for(
+
+let i =
+distractors.length - 1;
+
+i > 0;
+
+i--
+
+){
+
+
+const j =
+Math.floor(
+
+Math.random() *
+(i + 1)
+
+);
+
+
+[
+distractors[i],
+distractors[j]
+
+] = [
+
+distractors[j],
+distractors[i]
+
+];
+
+
+}
+
+
+const target =
+targetAnswerPositions[
+
+idx %
+targetAnswerPositions.length
+
+];
+
+
+const rebuilt =
+[
+...distractors
+];
+
+
+rebuilt.splice(
+
+target,
+0,
+correctOption
+
+);
+
+
+q.options =
+rebuilt;
+
+
+q.answer =
+target;
+
+
+}
+
+);
+
+
+
+/* =============================================
+   TAB NAVIGATION
+============================================= */
+
+
+const tabs =
+
+document.querySelectorAll(
+
+".nav button"
+
+);
+
+
+tabs.forEach(
+
+button=>{
+
+
+button.addEventListener(
+
+"click",
+
+()=>{
+
+
+tabs.forEach(
+
+b=>
+b.classList.remove(
+"active"
+)
+
+);
+
+
+document
+.querySelectorAll(
+".panel"
+)
+
+.forEach(
+
+panel=>
+panel.classList.remove(
+"active"
+)
+
+);
+
+
+button
+.classList
+.add(
+"active"
+);
+
+
+document
+.getElementById(
+button.dataset.tab
+)
+
+.classList
+.add(
+"active"
+);
+
+
+}
+
+);
+
+
+}
+
+);
+
+
+
+/* =============================================
+   FLASHCARDS
+============================================= */
+
+
+const flashGrid =
+
+document.getElementById(
+"flashGrid"
+);
+
+
+flashcards.forEach(
+
+item=>{
+
+
+const card =
+
+document.createElement(
+"button"
+);
+
+
+card.type =
+"button";
+
+
+card.className =
+"flash";
+
+
+card.innerHTML = `
+
+
+<div class="front">
+
+
+<div class="week-label">
+
+${item.week}
+
+</div>
+
+
+<h3>
+
+${item.name}
+
+</h3>
+
+
+</div>
+
+
+<div class="back">
+
+
+<b>
+
+${item.name}
+
+</b>
+
+
+<br><br>
+
+
+${item.text}
+
+
+</div>
+
+
+<div class="hint">
+
+klik untuk membalik
+
+</div>
+
+
+`;
+
+
+card.addEventListener(
+
+"click",
+
+()=>{
+
+card
+.classList
+.toggle(
+"flipped"
+);
+
+}
+
+);
+
+
+flashGrid
+.appendChild(
+card
+);
+
+
+}
+
+);
+
+
+
+/* =============================================
+   QUIZ VARIABLES
+============================================= */
+
+
+let currentQuestion =
+0;
+
+
+let score =
+0;
+
+
+let answered =
+false;
+
+
+let scoreByWeek = {
+
+"Week 4":[0,0],
+
+"Week 5":[0,0]
+
+};
+
+
+
+const qMeta =
+
+document.getElementById(
+"qMeta"
+);
+
+
+const scoreMeta =
+
+document.getElementById(
+"scoreMeta"
+);
+
+
+const progressBar =
+
+document.getElementById(
+"progressBar"
+);
+
+
+const qWeek =
+
+document.getElementById(
+"qWeek"
+);
+
+
+const questionBox =
+
+document.getElementById(
+"question"
+);
+
+
+const optionsBox =
+
+document.getElementById(
+"options"
+);
+
+
+const feedbackBox =
+
+document.getElementById(
+"feedback"
+);
+
+
+const nextButton =
+
+document.getElementById(
+"nextBtn"
+);
+
+
+const quizBox =
+
+document.getElementById(
+"quizBox"
+);
+
+
+const resultBox =
+
+document.getElementById(
+"resultBox"
+);
+
+
+
+/* =============================================
+   RENDER QUESTION
+============================================= */
+
+
+function renderQuestion(){
+
+
+answered =
+false;
+
+
+const q =
+questions[
+currentQuestion
+];
+
+
+qMeta.textContent =
+
+`Soal ${currentQuestion + 1} dari ${questions.length}`;
+
+
+scoreMeta.textContent =
+
+`Skor: ${score}`;
+
+
+progressBar.style.width =
+
+`${
+
+(
+currentQuestion /
+questions.length
+)
+
+* 100
+
+}%`;
+
+
+qWeek.textContent =
+
+`${q.week} • ${q.topic}`;
+
+
+questionBox.textContent =
+
+q.q;
+
+
+optionsBox.innerHTML =
+"";
+
+
+feedbackBox.className =
+
+"feedback";
+
+
+feedbackBox.textContent =
+"";
+
+
+nextButton.style.display =
+
+"none";
+
+
+q.options.forEach(
+
+(option,index)=>{
+
+
+const button =
+
+document.createElement(
+"button"
+);
+
+
+button.type =
+"button";
+
+
+button.className =
+"option";
+
+
+button.textContent =
+
+`${
+
+String.fromCharCode(
+65 + index
+)
+
+}. ${option}`;
+
+
+button.addEventListener(
+
+"click",
+
+()=>{
+
+checkAnswer(
+
+index,
+button
+
+);
+
+}
+
+);
+
+
+optionsBox
+.appendChild(
+button
+);
+
+
+}
+
+);
+
+
+}
+
+
+
+/* =============================================
+   CHECK ANSWER
+============================================= */
+
+
+function checkAnswer(
+
+choice,
+clickedButton
+
+){
+
+
+if(answered){
+
+return;
+
+}
+
+
+answered =
+true;
+
+
+const q =
+
+questions[
+currentQuestion
+];
+
+
+scoreByWeek[
+q.week
+][1]++;
+
+
+const optionButtons =
+
+[
+...optionsBox.children
+];
+
+
+optionButtons.forEach(
+
+(button,index)=>{
+
+
+button.disabled =
+true;
+
+
+if(
+
+index ===
+q.answer
+
+){
+
+
+button
+.classList
+.add(
+"correct"
+);
+
+
+}
+
+
+}
+
+);
+
+
+
+if(
+
+choice ===
+q.answer
+
+){
+
+
+score++;
+
+
+scoreByWeek[
+q.week
+][0]++;
+
+
+clickedButton
+.classList
+.add(
+"correct"
+);
+
+
+feedbackBox.textContent =
+
+"✓ Benar. " +
+q.why;
+
+
+feedbackBox.className =
+
+"feedback show good";
+
+
+}
+
+
+else{
+
+
+clickedButton
+.classList
+.add(
+"wrong"
+);
+
+
+feedbackBox.textContent =
+
+"✕ Belum tepat. " +
+q.why;
+
+
+feedbackBox.className =
+
+"feedback show bad";
+
+
+}
+
+
+
+scoreMeta.textContent =
+
+`Skor: ${score}`;
+
+
+
+if(
+
+currentQuestion ===
+questions.length - 1
+
+){
+
+
+nextButton.textContent =
+
+"Lihat hasil →";
+
+
+}
+
+
+else{
+
+
+nextButton.textContent =
+
+"Soal berikutnya →";
+
+
+}
+
+
+
+nextButton.style.display =
+
+"inline-block";
+
+
+}
+
+
+
+/* =============================================
+   NEXT QUESTION
+============================================= */
+
+
+nextButton.addEventListener(
+
+"click",
+
+()=>{
+
+
+if(
+
+!answered
+
+){
+
+return;
+
+}
+
+
+if(
+
+currentQuestion <
+questions.length - 1
+
+){
+
+
+currentQuestion++;
+
+
+renderQuestion();
+
+
+}
+
+
+else{
+
+
+showResult();
+
+
+}
+
+
+}
+
+);
+
+
+
+/* =============================================
+   RESULT
+============================================= */
+
+
+function showResult(){
+
+
+quizBox.style.display =
+
+"none";
+
+
+resultBox.style.display =
+
+"block";
+
+
+const percent =
+
+Math.round(
+
+score /
+questions.length *
+100
+
+);
+
+
+
+document
+.getElementById(
+"finalScore"
+)
+
+.textContent =
+
+`${score} / ${questions.length} • ${percent}%`;
+
+
+
+let message;
+
+
+if(
+
+percent >= 85
+
+){
+
+
+message =
+
+"Sangat baik. Pemilihan conveyor Week 4–5 sudah kuat.";
+
+
+}
+
+
+else if(
+
+percent >= 65
+
+){
+
+
+message =
+
+"Sudah cukup baik. Review kembali perbedaan route, containment, dan karakter feed.";
+
+
+}
+
+
+else{
+
+
+message =
+
+"Perlu review lagi. Mulai dari route → feed → containment → mekanisme alat.";
+
+
+}
+
+
+
+document
+.getElementById(
+"finalMessage"
+)
+
+.textContent =
+
+message;
+
+
+
+const breakdown =
+
+document.getElementById(
+"breakdown"
+);
+
+
+breakdown.innerHTML =
+"";
+
+
+Object.entries(
+
+scoreByWeek
+
+)
+
+.forEach(
+
+([week,value])=>{
+
+
+const box =
+
+document.createElement(
+"div"
+);
+
+
+const pct =
+
+value[1] === 0
+
+?
+
+0
+
+:
+
+Math.round(
+
+value[0] /
+value[1] *
+100
+
+);
+
+
+box.innerHTML = `
+
+
+<b>
+
+${week}
+
+</b>
+
+
+<br>
+
+
+<span
+style="
+font-size:25px;
+color:#153452;
+">
+
+${value[0]} / ${value[1]}
+
+</span>
+
+
+<br>
+
+
+<span
+style="
+font-size:13px;
+color:#69798b;
+">
+
+${pct}%
+
+</span>
+
+
+`;
+
+
+breakdown
+.appendChild(
+box
+);
+
+
+}
+
+);
+
+
+}
+
+
+
+/* =============================================
+   RESET QUIZ
+============================================= */
+
+
+function resetQuiz(){
+
+
+currentQuestion =
+0;
+
+
+score =
+0;
+
+
+answered =
+false;
+
+
+scoreByWeek = {
+
+"Week 4":[0,0],
+
+"Week 5":[0,0]
+
+};
+
+
+quizBox.style.display =
+
+"block";
+
+
+resultBox.style.display =
+
+"none";
+
+
+renderQuestion();
+
+
+}
+
+
+
+document
+.getElementById(
+"resetQuiz"
+)
+
+.addEventListener(
+
+"click",
+
+resetQuiz
+
+);
+
+
+
+document
+.getElementById(
+"restartQuiz"
+)
+
+.addEventListener(
+
+"click",
+
+resetQuiz
+
+);
+
+
+
+/* =============================================
+   START
+============================================= */
+
+
+renderQuestion();
+
+
+</script>
+
+
+</body>
+
+</html>
